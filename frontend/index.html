@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Ristorante</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>Benvenuto al Ristorante "Magna che te passa"</h1>
+        <p>Chiedi informazioni sul menu, prenotazioni, orari e altro!</p>
+    </header>
+    <div class="chat-container">
+        <div id="chat-box" class="chat-box">
+            <!-- Messaggi verranno mostrati qui -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Scrivi un messaggio...">
+            <button id="send-btn">Invia</button>
+        </div>
+    </div>
+
+    <div class="menu-carousel-container">
+        <h2 class="menu-title">Il Nostro Menu</h2>
+        <div class="menu-carousel">
+            <!-- Elemento del carosello -->
+            <div class="menu-card">
+                <i class="fas fa-bread-slice menu-icon"></i>
+                <h4 class="menu-name">Bruschetta</h4>
+                <p class="menu-description">Pane tostato con pomodorini freschi e basilico</p>
+                <span class="menu-price">€6.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-cheese menu-icon"></i>
+                <h4 class="menu-name">Caprese</h4>
+                <p class="menu-description">Mozzarella di bufala con pomodori e basilico</p>
+                <span class="menu-price">€8.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-drumstick-bite menu-icon"></i>
+                <h4 class="menu-name">Carpaccio</h4>
+                <p class="menu-description">Sottili fette di manzo con rucola e parmigiano</p>
+                <span class="menu-price">€12.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-utensil-spoon menu-icon"></i>
+                <h4 class="menu-name">Carbonara</h4>
+                <p class="menu-description">Spaghetti con uova, guanciale e pecorino</p>
+                <span class="menu-price">€12.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-pepper-hot menu-icon"></i>
+                <h4 class="menu-name">Amatriciana</h4>
+                <p class="menu-description">Bucatini con guanciale e pomodoro</p>
+                <span class="menu-price">€11.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-seedling menu-icon"></i>
+                <h4 class="menu-name">Risotto</h4>
+                <p class="menu-description">Risotto allo zafferano alla milanese</p>
+                <span class="menu-price">€14.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-pizza-slice menu-icon"></i>
+                <h4 class="menu-name">Margherita</h4>
+                <p class="menu-description">Pomodoro, mozzarella e basilico</p>
+                <span class="menu-price">€8.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-pizza-slice menu-icon"></i>
+                <h4 class="menu-name">Marinara</h4>
+                <p class="menu-description">Pomodoro, aglio e origano</p>
+                <span class="menu-price">€7.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-pepper-hot menu-icon"></i>
+                <h4 class="menu-name">Diavola</h4>
+                <p class="menu-description">Pomodoro, mozzarella e salame piccante</p>
+                <span class="menu-price">€10.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-cheese menu-icon"></i>
+                <h4 class="menu-name">Quattro Formaggi</h4>
+                <p class="menu-description">Mozzarella, gorgonzola, parmigiano, fontina</p>
+                <span class="menu-price">€11.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-pizza-slice menu-icon"></i>
+                <h4 class="menu-name">Capricciosa</h4>
+                <p class="menu-description">Pomodoro, mozzarella, prosciutto, funghi, olive</p>
+                <span class="menu-price">€12.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-leaf menu-icon"></i>
+                <h4 class="menu-name">Bufalina</h4>
+                <p class="menu-description">Pomodoro, mozzarella di bufala e basilico</p>
+                <span class="menu-price">€13.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-seedling menu-icon"></i>
+                <h4 class="menu-name">Caesar</h4>
+                <p class="menu-description">Lattuga, pollo, crostini, parmigiano</p>
+                <span class="menu-price">€10.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-fish menu-icon"></i>
+                <h4 class="menu-name">Mediterranea</h4>
+                <p class="menu-description">Insalata mista, tonno, olive, mozzarella</p>
+                <span class="menu-price">€9.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-ice-cream menu-icon"></i>
+                <h4 class="menu-name">Tiramisù</h4>
+                <p class="menu-description">Classico dessert al caffè</p>
+                <span class="menu-price">€6.00</span>
+            </div>
+            <div class="menu-card">
+                <i class="fas fa-cheese menu-icon"></i>
+                <h4 class="menu-name">Panna Cotta</h4>
+                <p class="menu-description">Con coulis ai frutti di bosco</p>
+                <span class="menu-price">€5.00</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ristorante ChatBot. Tutti i diritti riservati.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

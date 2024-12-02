@@ -1,0 +1,14 @@
+# Ignora l'ambiente virtuale Python
+backend/venv/
+
+# Ignora file specifici di configurazione o istanze locali
+backend/instance/
+
+# Ignora file di sistema generici
+*.log
+*.pyc
+__pycache__/
+
+# Ignora i file di build o di dipendenze
+node_modules/
+dist/

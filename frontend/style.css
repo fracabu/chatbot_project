@@ -1,0 +1,387 @@
+/* Reset e stili base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+    background-color: #fffdf7;
+    margin: 0;
+    padding: 0;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f9a825, #ff6f00);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+header h1::before {
+    content: "\f818"; /* Icona a tema food (utensils) */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.8em;
+    position: absolute;
+    left: -25px;
+    top: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 8px 0;
+    opacity: 0.9;
+}
+
+/* Container principale */
+.chat-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff8e1;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px solid #ffe082;
+}
+
+/* Area messaggi */
+.chat-box {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: 600px;
+    background-color: #fff3e0;
+    scroll-behavior: smooth;
+}
+
+/* Stili messaggi */
+.message {
+    margin: 1rem 0;
+    max-width: 80%;
+    animation: messageAppear 0.3s ease-out;
+}
+
+.user-message {
+    margin-left: auto;
+}
+
+.bot-message {
+    margin-right: auto;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 0.85em;
+}
+
+.sender {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.time {
+    color: #666;
+}
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.user-message .message-content {
+    background: linear-gradient(135deg, #f57c00, #ff9800);
+    color: white;
+    border-top-right-radius: 4px;
+}
+
+.bot-message .message-content {
+    background: #ffe0b2;
+    color: #2c2c2c;
+    border-top-left-radius: 4px;
+}
+
+/* Area input */
+.input-container {
+    display: flex;
+    padding: 1rem;
+    background-color: white;
+    border-top: 2px solid #ffe082;
+    position: relative;
+}
+
+#user-input {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1em;
+    border: 2px solid #ffe082;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    margin-right: 12px;
+}
+
+#user-input:focus {
+    border-color: #ff6f00;
+}
+
+#send-btn {
+    padding: 0 1.5rem;
+    font-size: 1em;
+    border: none;
+    background-color: #ff6f00;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#send-btn:hover {
+    background-color: #f57c00;
+    transform: translateY(-1px);
+}
+
+#send-btn:active {
+    transform: translateY(0);
+}
+
+/* Suggerimenti rapidi */
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 1rem;
+    background: #fff8e1;
+    border-bottom: 2px solid #ffe082;
+}
+
+.suggestion-btn {
+    padding: 8px 16px;
+    background: white;
+    border: 2px solid #ffe082;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.suggestion-btn:hover {
+    background: #ff6f00;
+    color: white;
+    border-color: #ff6f00;
+}
+
+/* Menu items */
+.menu-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 8px 0;
+    border: 2px solid #ffe082;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.menu-item-icon {
+    font-size: 2rem;
+    color: #ff6f00;
+}
+
+.menu-item-name {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.menu-item-price {
+    color: #ff6f00;
+    font-weight: 600;
+}
+
+.menu-item-description {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f9a825, #ff6f00);
+    color: white;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chat-container {
+        margin: 0;
+        border-radius: 0;
+        height: 100vh;
+    }
+    
+    .chat-box {
+        max-height: calc(100vh - 180px);
+    }
+    
+    .message {
+        max-width: 90%;
+    }
+}
+/* Contenitore del carosello */
+.menu-carousel-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    background: #fffdf7;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+    color: #f57c00;
+    font-weight: 700;
+}
+
+/* Carosello */
+.menu-carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+}
+
+/* Card del menu */
+.menu-card {
+    min-width: 220px;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #ffe082;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-icon {
+    font-size: 2.5rem;
+    color: #ff6f00;
+    margin-bottom: 0.5rem;
+}
+
+.menu-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.menu-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.menu-price {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #f57c00;
+}
+
+/* Pulsanti di controllo */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-btn {
+    background: #ff6f00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #f57c00;
+}
+
+.carousel-btn:active {
+    transform: scale(0.9);
+}
+
+/* Scrollbar styling */
+.menu-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.menu-carousel::-webkit-scrollbar-thumb {
+    background: #f57c00;
+    border-radius: 3px;
+}
+
+.menu-carousel::-webkit-scrollbar-track {
+    background: #ffe082;
+}
