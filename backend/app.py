@@ -28,6 +28,10 @@ class Reservation(db.Model):
     date = db.Column(db.DateTime, nullable=False)
     guests = db.Column(db.Integer, nullable=False)
 
+@app.route('/')
+def home():
+    return "Welcome to the Chatbot API! You can interact with /chat to talk to the chatbot or /reservations to make a booking."
+
 @app.route('/chat', methods=['POST'])
 def chatbot():
     user_message = request.json.get('message', '').lower()
